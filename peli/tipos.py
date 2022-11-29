@@ -1,6 +1,6 @@
 #restriccines
 rest = ("G", "PG-13", "PG-16", "R")
-idiomas = ("espanol", "ingles" "subtitulado")
+idiomas = ("espanol", "ingles", "subtitulado")
 
 #descriccion de restricciones
 desc = {rest[0]:"audiencia genera",

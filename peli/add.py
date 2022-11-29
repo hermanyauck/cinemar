@@ -1,5 +1,4 @@
 from peli import tipos
-
 import sqlite3 as base
 
 #duracion en minutos
@@ -7,7 +6,7 @@ import sqlite3 as base
 def add(titulo, duracion, clasificacion, idioma):
     conn = base.connect("base.db")
     cursor = conn.cursor()
-    consulta = f'''INSERT INTO PERSONAS
+    consulta = f'''INSERT INTO PELICULAS
     ("titulo","duracion","clasificacion","idioma")
     VALUES 
     ("{titulo}",{duracion},"{tipos.rest[clasificacion]}","{tipos.idiomas[idioma]}");'''
