@@ -1,7 +1,8 @@
-
+puestos = ("client", "vendor", "admin")
+import user
 
 class usuario:
-    def __init__(self):
+    def __init__(self, nombre, edad, password, puesto):
         self.nombre = ""
         self.edad = 0
         self.password = ""

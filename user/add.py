@@ -1,26 +1,24 @@
-import sqlite3 as base
+import user
+import sqlite
+import sqlite3
 
-puestos = ("client", "vendor", "admin")
+trupla = ("vacia")
 def agregar(nombre, edad, usuario, password, tipo):
     try:
-        conn = base.connect("base.db")
-        cursor = conn.cursor()
-        consulta = f'''INSERT INTO PERSONAS
+        sqlite.consulta(f'''INSERT INTO PERSONAS
         ("nombre","edad","usuario","password","puesto")
         VALUES 
-        ("{nombre}",{edad},"{usuario}","{password}","{tipo}");'''
-        cursor.execute(consulta)
-        conn.commit()
-        conn.close()
+        ("{nombre}",{edad},"{usuario}","{password}","{tipo}");''')
+
         #IntegrityError salta cuando no se cumple el unique
-    except base.IntegrityError:
+    except sqlite3.IntegrityError:
         print("ese usuario ya existe")
 
 def client(nombre, edad, usuario, password):
-    agregar(nombre, edad, usuario, password, puestos[0])
+    agregar(nombre, edad, usuario, password, user.puestos[0])
 
 def vendor(nombre, edad, usuario, password):
-    agregar(nombre, edad, usuario, password, puestos[1])
+    agregar(nombre, edad, usuario, password, user.puestos[1])
 
 def admin(nombre, edad, usuario, password):
-    agregar(nombre, edad, usuario, password, puestos[2])
+    agregar(nombre, edad, usuario, password, user.puestos[2])

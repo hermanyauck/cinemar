@@ -1,5 +1,3 @@
-import sqlite3 as base
-
 usuarios = []
 
 def usuarios():
