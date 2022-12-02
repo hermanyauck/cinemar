@@ -5,7 +5,7 @@ import sqlite3
 trupla = ("vacia")
 def agregar(nombre, edad, usuario, password, tipo):
     try:
-        sqlite.consulta(f'''INSERT INTO PERSONAS
+        sqlite.insert(f'''INSERT INTO PERSONAS
         ("nombre","edad","usuario","password","puesto")
         VALUES 
         ("{nombre}",{edad},"{usuario}","{password}","{tipo}");''')
