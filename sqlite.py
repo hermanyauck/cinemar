@@ -10,8 +10,8 @@ def insert(consulta):
 def select(consulta):
     conn = sqlite3.connect("base.db")
     cursor = conn.cursor()
-    salida = cursor.execute(consulta)
-    listas = salida.fetchall()
+    cursor.execute(consulta)
+    listas = cursor.fetchall()
     conn.commit()
     conn.close()
     return listas
