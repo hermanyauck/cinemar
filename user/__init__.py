@@ -26,3 +26,18 @@ class usuario:
     @property
     def puesto(self):
         return self.puesto
+    @nombre.setter
+    def nombre(self,addNombre):
+        self.nombre = addNombre
+    @edad.setter
+    def edad(self, addEdad):
+        self.edad = addEdad
+    @usuario.setter
+    def usuario(self, addUsuario):
+        self.usuario = addUsuario
+    @password.setter
+    def password(self, addPass):
+        self.password = addPass
+    @puesto.setter
+    def puesto(self,addPuesto):
+        self.puesto = addPuesto
