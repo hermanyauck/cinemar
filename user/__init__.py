@@ -6,11 +6,13 @@ import user
 
 class usuario:
     def __init__(self, nombre, edad, usuario, password, puesto):
-        self.nombre = ""
-        self.edad = 0
-        self.usuario = ""
-        self.password = ""
-        self.puesto = ""
+        self.nombre = nombre
+        self.edad = edad
+        self.usuario = usuario
+        self.password = password
+        self.puesto = puesto
+    #def __init__(self, lista):
+
     @property
     def nombre(self):
         return self.nombre
