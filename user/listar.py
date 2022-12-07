@@ -5,6 +5,6 @@ usuarios = []
 
 def usuarios():
     persona = sqlite.select('''SELECT 
-    (nombre, edad, usuario, password, puesto) 
-    FROM PERSONAS''')
+    nombre, edad, usuario, password, puesto 
+    FROM PERSONAS;''')
     print(persona)
