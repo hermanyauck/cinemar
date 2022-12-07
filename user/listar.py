@@ -1,5 +1,3 @@
-import user
-
 usuarios = []
 
 def usuarios():
