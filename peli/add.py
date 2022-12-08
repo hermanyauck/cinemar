@@ -1,5 +1,4 @@
-from peli import tipos
-import sqlite3 as base
+import peli
 
 #duracion en minutos
 #clasificacion 0 al 3
