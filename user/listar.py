@@ -3,6 +3,7 @@ import sqlite3
 
 usuarios = []
 
+#retorna una lista de tuplas
 def usuarios():
     persona = sqlite.select('''SELECT 
     nombre, edad, usuario, password, puesto 
