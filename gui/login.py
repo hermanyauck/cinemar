@@ -13,6 +13,7 @@ def getUss():
         messagebox.showinfo(message='password incorrecta')
     else:
         messagebox.showinfo(message=f'ingresar como {usuario[3]}')
+        print(usuario)
         root.quit()
         dUsuario.extend(usuario)
     return

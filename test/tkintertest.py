@@ -20,7 +20,6 @@ def ventana_inicio():
     Button(text="Registrarse", height="2", width="30", bg=pestas_color, command=registro).pack()  # BOTÓN "Registrarse".
     Label(text="").pack()
     ventana_principal.mainloop()
-    print("2")
 
 
 # CREAMOS VENTANA PARA REGISTRO.
