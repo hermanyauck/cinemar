@@ -4,4 +4,4 @@ import peli
 import funciones
 import sqlite3
 
-gui.login()
+usuario = gui.login()

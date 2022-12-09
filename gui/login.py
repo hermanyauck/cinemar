@@ -1,19 +1,21 @@
 from tkinter import *
 from tkinter import messagebox
+from gui import dUsuario
 import user
 
 def getUss():
     eu = entryUser.get()
     ep = entryPass.get()
-    dUsuario = user.getUser(eu,ep)
-    if not(dUsuario[0]):
+    usuario = user.getUser(eu,ep)
+    if not(usuario[0]):
         messagebox.showinfo(message='usuario no existe')
-    elif not(dUsuario[1]):
+    elif not(usuario[1]):
         messagebox.showinfo(message='password incorrecta')
     else:
-        messagebox.showinfo(message=f'ingresar como {dUsuario[3]}')
+        messagebox.showinfo(message=f'ingresar como {usuario[3]}')
+        root.quit()
+        dUsuario.extend(usuario)
     return
-
 
 root = Tk()
 root.title('CINEMAR LOGIN')
