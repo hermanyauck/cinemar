@@ -1,8 +1,31 @@
 import user.add
 import user.listar
+import sqlite
+import sqlite3
 
 puestos = ("client", "vendor", "admin")
-import user
+dpuestos = {0:"client", 1:"vendor", 2:"admin"}
+
+def getUser(us, pas):
+    salida = [False, False]
+    #user y pass
+    usp = sqlite.select(f'''select 
+    usuario, password, puesto, nombre, edad, puesto
+    FROM PERSONAS 
+    WHERE usuario = "{us}"''')
+    try:
+        uspp = usp[0]
+        if(us == uspp[0]):
+            salida[0] = uspp[0]
+            if uspp[1] == pas:
+                salida[1] = uspp[1]
+                salida.append(uspp[2])
+                salida.append(uspp[3])
+                salida.append(uspp[4])
+                salida.append(uspp[5])
+    finally:
+        return salida
+
 
 class usuario:
     def __init__(self, nombre, edad, usuario, password, puesto):

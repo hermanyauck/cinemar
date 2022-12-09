@@ -1,5 +1,4 @@
 import peli.add
-import peli.
 
 #restriccines
 rest = ("G", "PG-13", "PG-16", "R")

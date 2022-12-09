@@ -5,7 +5,7 @@ usuarios = []
 
 #retorna una lista de tuplas
 def usuarios():
-    persona = sqlite.select('''SELECT 
+    personas = sqlite.select('''SELECT 
     nombre, edad, usuario, password, puesto 
     FROM PERSONAS;''')
-    print(persona)
+    print(personas)
