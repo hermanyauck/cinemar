@@ -10,3 +10,10 @@ def sala(asientos):
     (butacas) VALUES 
     ("{asientos}");''')
 
+def funcion(pelicula, sala, anio, mes, dia, hora):
+    fecha = anio + mes + dia
+    sqlite.insert(f'''INSERT INTO FUNCIONES
+    (idPelicula, idSala, fecha, hora)
+    VALUES
+    ("{pelicula}","{sala}","{fecha}","{hora}";''')
+
