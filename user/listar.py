@@ -9,3 +9,4 @@ def usuarios():
     nombre, edad, usuario, password, puesto 
     FROM PERSONAS;''')
     print(personas)
+

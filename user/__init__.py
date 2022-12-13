@@ -9,7 +9,7 @@ dpuestos = {0:"client", 1:"vendor", 2:"admin"}
 def getUser(us, pas):
     salida = [False, False]
     #user y pass
-    usp = sqlite.select(f'''select 
+    usp = sqlite.selects(f'''select 
     usuario, password, puesto, nombre, edad, puesto
     FROM PERSONAS 
     WHERE usuario = "{us}"''')
