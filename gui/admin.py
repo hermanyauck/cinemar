@@ -12,36 +12,46 @@ def getPeli():
 
 
 def addPeli():
-    global wPeli
     global entryTitulo
     global entryDuracion
     global entryRestriccion
-    global lTitulo
-    global lDuracion
-    global lRestriccion
-    global eTitulo
-    global eDuracion
-    global eRestriccion
-    global sbmitbtn
-
     wPeli = Toplevel(wAdmin)
     wPeli.title("AGREGAR PELICULA")
     wPeli.geometry("300x250")
-
     entryTitulo = StringVar()
     entryDuracion = StringVar()
     entryRestriccion = StringVar()
-
-    lTitulo = Label(wPeli, text="titulo").place(x=30, y=50)
-    lDuracion = Label(wPeli, text="duracion").place(x=30, y=90)
-    lRestriccion = Label(wPeli, text="restriccion").place(x=30, y=130)
-    eTitulo = Entry(wPeli, textvariable=entryTitulo).place(x=100, y=50)
-    eDuracion = Entry(wPeli, textvariable=entryDuracion).place(x=100, y=90)
-    eRestriccion = Entry(wPeli, textvariable=entryRestriccion).place(x=100, y=130)
-    sbmitbtn = Button(wPeli, text="Cargar", command=lambda: getPeli()).place(x=100, y=170)
+    Label(wPeli, text="titulo").place(x=30, y=50)
+    Label(wPeli, text="duracion").place(x=30, y=90)
+    Label(wPeli, text="restriccion").place(x=30, y=130)
+    Entry(wPeli, textvariable=entryTitulo).place(x=100, y=50)
+    Entry(wPeli, textvariable=entryDuracion).place(x=100, y=90)
+    Entry(wPeli, textvariable=entryRestriccion).place(x=100, y=130)
+    Button(wPeli, text="Cargar", command=lambda: getPeli()).place(x=100, y=170)
 
 def addUser():
-    pass
+    global entryName
+    global entryEdad
+    global entryUser
+    global entryPassword
+    global sbmitbtn
+    wAddUser = Toplevel(wAdmin)
+    wAddUser.title("AGREGAR USUARIO")
+    wAddUser.geometry("300x250")
+    entryName = StringVar()
+    entryEdad = StringVar()
+    entryUser = StringVar()
+    Label(wAddUser, text="titulo").place(x=30, y=50)
+    Label(wAddUser, text="duracion").place(x=30, y=90)
+    Label(wAddUser, text="restriccion").place(x=30, y=130)
+    Label(wAddUser, text="restriccion").place(x=30, y=130)
+    Entry(wAddUser, textvariable=entryTitulo).place(x=100, y=50)
+    Entry(wAddUser, textvariable=entryDuracion).place(x=100, y=90)
+    Entry(wAddUser, textvariable=entryRestriccion).place(x=100, y=130)
+    sbmitbtn = Button(wAddUser, text="Cargar", command=lambda: getPeli()).place(x=100, y=170)
+
+
+
 def addFunc():
     pass
 def addResv():
